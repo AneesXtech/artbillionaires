@@ -1962,5 +1962,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
+  // ── YouTube Video Placeholder Click to Play ──
+  const youtubeOverlay = document.getElementById('video-overlay');
+  const youtubeVideoContainer = document.getElementById('youtube-video-container');
+  if (youtubeOverlay && youtubeVideoContainer) {
+    youtubeOverlay.addEventListener('click', () => {
+      youtubeVideoContainer.innerHTML = `
+        <iframe 
+          class="video-player" 
+          src="https://www.youtube.com/embed/X-pEUiJoeVM?autoplay=1&rel=0" 
+          title="World Class Oil Paintings by Anand PKC"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          style="width: 100%; height: 100%; object-fit: cover; display: block; border: none;">
+        </iframe>
+      `;
+    });
+  }
+
 });
 

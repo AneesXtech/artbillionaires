@@ -914,15 +914,18 @@
           </div>
         </div>
 
-        <div class="video-widget">
-          <iframe 
-            class="video-player" 
-            src="https://www.youtube.com/embed/X-pEUiJoeVM?rel=0&autoplay=0" 
-            title="World Class Oil Paintings by Anand PKC"
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-          </iframe>
+        <div class="video-widget" id="youtube-video-container">
+          <!-- Custom Play Overlay with Thumbnail background and dark overlay tint -->
+          <div class="video-poster-overlay" id="video-overlay" style="background-image: linear-gradient(rgba(18, 13, 7, 0.45), rgba(18, 13, 7, 0.45)), url('assets/thumnailvideo.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+            <div class="video-play-ring">
+              <button class="video-play-btn" id="youtube-play-btn" aria-label="Play Masterpiece Video">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+            <p class="video-poster-tagline">Play Masterpiece Showcase</p>
+          </div>
         </div>
 
         <p class="video-caption">
